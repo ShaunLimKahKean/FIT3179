@@ -22,3 +22,25 @@
 </body>
 
 </html>
+
+<!---- this is for online vega version
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Cheapest European Cities" },
+    "data": {
+        "values": [
+      {"id": 1, "city": "Kiew", "daily_cost":26},
+      {"id": 2, "city": "Karkow", "daily_cost":28},
+      {"id": 3, "city": "Belgrade", "daily_cost":29},
+      {"id": 4, "city": "Bucharest", "daily_cost":30},
+      {"id": 5, "city": "Sofia", "daily_cost":33}
+    ]
+        
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": { "field": "daily_cost", "type": "quantitative", "title":"Daily Cost"},
+        "y": { "field": "city", "type": "nominal", "title": null}
+    }
+}
+-->

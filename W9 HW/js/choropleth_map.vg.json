@@ -1,40 +1,44 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Choropleth map of Gini coefficients by state",
-  "width": 600,
+  
+  "title": "Gini coefficients by state",
+  "width": 800,
   "height": 400,
-  "projection": {"type": "equalEarth"},
-  "data": {
-    "url": "ne_10m_admin_1_states_provinces.json", 
-    "format": {
-      "type": "topojson",
-      "feature": "ne_10m_admin_1_states_provinces" 
-    }
+  "projection": {
+    "type": "equalEarth"
   },
-  "transform": [
+  "layer": [
     {
-      "lookup": "properties.name",
-      "from": {
-        "data": {
-          "url": "data/hh_inequality_state.csv" 
+      "data": {
+        "url": "https://raw.githubusercontent.com/ShaunLimKahKean/FIT3179/refs/heads/main/W9%20HW/js/ne_10m_admin_1_states_provinces.topojson",
+        "format": { "type": "topojson", "feature": "ne_10m_admin_1_states_provinces" }
+      },
+      "mark": { "type": "geoshape", "stroke": "white" },
+      "encoding": {
+        "color": {
+          "field": "gini",
+          "type": "quantitative",
+          "scale": { "scheme": "blues" }
         },
-        "key": "state",
-        "fields": ["gini"]
-      }
+        "tooltip": [
+          { "field": "properties.name", "type": "nominal" },
+          { "field": "gini", "type": "quantitative" }
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {
+              "url": "data/hh_inequality_state.csv",
+              "format": { "type": "csv" }
+            },
+            "key": "state",
+            "fields": ["gini"]
+          }
+        }
+      ]
     }
-  ],
-  "mark": "geoshape",
-  "encoding": {
-    "color": {
-      "field": "gini",
-      "type": "quantitative",
-      "scale": {
-        "scheme": "blues"
-      }
-    },
-    "tooltip": [
-      {"field": "properties.name", "type": "nominal", "title": "State"},
-      {"field": "gini", "type": "quantitative", "title": "Gini Coefficient"}
-    ]
-  }
+  ]
 }
+

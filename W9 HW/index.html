@@ -13,8 +13,49 @@
   <div id="choropleth_map"></div>
 
   <script type="text/javascript">
-    var spec2 = "choropleth_map.vg.json"; // Updated path
-    vegaEmbed('#choropleth_map', spec2).then(function(result) {
+    var spec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "Choropleth map of Gini coefficients by state",
+      "width": 600,
+      "height": 400,
+      "projection": {"type": "equalEarth"},
+      "data": {
+        "url": "ne_10m.topojson", 
+        "format": {
+          "type": "topojson",
+          "feature": "ne_10m" 
+        }
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {
+              "url": "data/hh_inequality_state.csv",
+              "format": {"type": "csv"}
+            },
+            "key": "state",
+            "fields": ["gini"]
+          }
+        }
+      ],
+      "mark": "geoshape",
+      "encoding": {
+        "color": {
+          "field": "gini",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "blues"
+          }
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "State"},
+          {"field": "gini", "type": "quantitative", "title": "Gini Coefficient"}
+        ]
+      }
+    };
+
+    vegaEmbed('#choropleth_map', spec).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

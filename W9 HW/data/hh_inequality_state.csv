@@ -1,4 +1,4 @@
-state,date,gini
+﻿state,date,gini
 Johor,1974,0.439
 Johor,1976,0.469
 Johor,1979,0.442
@@ -170,6 +170,8 @@ Pulau Pinang,2014,0.364
 Pulau Pinang,2016,0.356
 Pulau Pinang,2019,0.359
 Pulau Pinang,2022,0.371
+Sabah,1974,0.1
+Sabah,1976,0.1
 Sabah,1979,0.49
 Sabah,1984,0.491
 Sabah,1987,0.467
@@ -187,6 +189,8 @@ Sabah,2014,0.387
 Sabah,2016,0.402
 Sabah,2019,0.397
 Sabah,2022,0.395
+Sarawak,1974,0.1
+Sarawak,1976,0.1
 Sarawak,1979,0.501
 Sarawak,1984,0.498
 Sarawak,1987,0.465
@@ -242,6 +246,9 @@ Terengganu,2014,0.36
 Terengganu,2016,0.328
 Terengganu,2019,0.335
 Terengganu,2022,0.326
+Kuala Lumpur,1974,0.1
+Kuala Lumpur,1976,0.1
+Kuala Lumpur,1979,0.1
 Kuala Lumpur,1984,0.486
 Kuala Lumpur,1987,0.465
 Kuala Lumpur,1989,0.428
@@ -258,6 +265,18 @@ Kuala Lumpur,2014,0.407
 Kuala Lumpur,2016,0.378
 Kuala Lumpur,2019,0.35
 Kuala Lumpur,2022,0.38
+Labuan,1974,0.1
+Labuan,1976,0.1
+Labuan,1979,0.1
+Labuan,1984,0.1
+Labuan,1987,0.1
+Labuan,1989,0.1
+Labuan,1992,0.1
+Labuan,1995,0.1
+Labuan,1997,0.1
+Labuan,1999,0.1
+Labuan,2002,0.1
+Labuan,2004,0.1
 Labuan,2007,0.388
 Labuan,2009,0.387
 Labuan,2012,0.383
@@ -265,6 +284,18 @@ Labuan,2014,0.385
 Labuan,2016,0.398
 Labuan,2019,0.333
 Labuan,2022,0.3
+Putrajaya,1974,0.1
+Putrajaya,1976,0.1
+Putrajaya,1979,0.1
+Putrajaya,1984,0.1
+Putrajaya,1987,0.1
+Putrajaya,1989,0.1
+Putrajaya,1992,0.1
+Putrajaya,1995,0.1
+Putrajaya,1997,0.1
+Putrajaya,1999,0.1
+Putrajaya,2002,0.1
+Putrajaya,2004,0.1
 Putrajaya,2007,0.362
 Putrajaya,2009,0.342
 Putrajaya,2012,0.305
@@ -272,4 +303,3 @@ Putrajaya,2014,0.374
 Putrajaya,2016,0.369
 Putrajaya,2019,0.361
 Putrajaya,2022,0.368
-,,

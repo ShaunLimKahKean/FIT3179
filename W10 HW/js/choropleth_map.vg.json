@@ -11,7 +11,16 @@
         "input": "select",
         "options": ["1974", "1976", "1979", "1984", "1987", "1989", "1992", "1995", "1997", "1999", "2002", "2004", "2007", "2009", "2012", "2014", "2016", "2019", "2022"],
         "labels": ["1974", "1976", "1979", "1984", "1987", "1989", "1992", "1995", "1997", "1999", "2002", "2004", "2007", "2009", "2012", "2014", "2016", "2019", "2022"],
-        "name": "Select Year: "
+        "name": "Select Year for Gini Map: "
+      }
+    },
+    {
+      "name": "state",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Penang", "Perak", "Perlis", "Sabah", "Sarawak", "Selangor", "Terengganu", "W.P. Kuala Lumpur", "W.P. Labuan", "W.P. Putrajaya"],
+        "name": "Select State for Poverty Line: "
       }
     }
   ],
@@ -54,7 +63,7 @@
       ]
     },
     {
-      "title": "Multiline Graph",
+      "title": "Poverty rate by state (1972 to 2022)",
       "width": 800, 
       "height": 200,  
       "data": {
@@ -63,10 +72,26 @@
       },
       "mark": "line",
       "encoding": {
-        "x": { "field": "year", "type": "temporal" },
-        "y": { "field": "value", "type": "quantitative" },
-        "color": { "field": "category", "type": "nominal" }
-      }
+        "x": {
+          "field": "date",
+          "type": "ordinal",
+          "axis": {
+            "values": ["1970", "1976", "1979", "1984", "1987", "1989", "1992", "1995", "1997", "1999", "2002", "2004", "2007", "2009", "2012", "2014", "2016", "2019", "2020", "2022"]
+          }
+        },
+        "y": { "field": "poverty_absolute", "type": "quantitative" },
+        "color": { "field": "state", "type": "nominal" },
+        "tooltip": [
+          { "field": "state", "type": "nominal", "title": "State" },
+          { "field": "date", "type": "ordinal", "title": "Year" },
+          { "field": "poverty_absolute", "type": "quantitative", "title": "Poverty Rate" }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "state == 'All' ? true : datum.state == state"
+        }
+      ]
     }
   ]
 }

@@ -37,7 +37,7 @@
         "color": {
           "field": "gini",
           "type": "quantitative",
-          "scale": { "scheme": "blues" }
+          "scale": { "scheme": "greens" }
         },
         "tooltip": [
           { "field": "properties.name", "type": "nominal", "title": "State Name" },

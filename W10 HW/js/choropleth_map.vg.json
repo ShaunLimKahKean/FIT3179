@@ -70,7 +70,10 @@
         "url": "data/hh_poverty_state.csv",
         "format": { "type": "csv" }
       },
-      "mark": "line",
+      "mark": {
+        "type": "line",
+        "point": true
+      },
       "encoding": {
         "x": {
           "field": "date",

@@ -10,6 +10,7 @@
       "font": "Arial"
     }
   },
+  "background": "lightyellow",
   "params": [
     {
       "name": "year",

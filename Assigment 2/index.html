@@ -14,48 +14,87 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+      background-color: white; /* Light background for the whole page */
+      color: #333; /* Dark text color for contrast */
       padding: 20px;
+      text-align: center; /* Center-align the text */
     }
-    
-    #choropleth_map, #line_chart {
-      width: 80%; /* You can adjust the width if necessary */
-      margin: 20px auto;
+
+    /* Main content wrapper */
+    .content-wrapper {
+      background-color: lightpink; /* Background color for the content */
+      max-width: 1200px; /* Max width for the content */
+      margin: 0 auto; /* Center the content horizontally */
+      padding: 20px; /* Padding around the content */
+      border-radius: 10px; /* Rounded corners for the content */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 
     h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 20px;
+      font-size: 28px; /* Larger font size for title */
+      margin-bottom: 10px; /* Space below the title */
     }
 
-    .visualization-container {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
+    p {
+      font-size: 16px; /* Standard font size for description */
+      margin-bottom: 20px; /* Space below the description */
+      max-width: 800px; /* Limiting width of paragraph */
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* Center the visualization */
+    /* Box frame styles */
+    .box-frame {
+      background-color: lightyellow; /* White background for the box */
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px; /* Padding inside the box */
+      margin: 20px auto; /* Center and space out the box */
+      width: 90%; /* Width of the box */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    /* Text box styles */
+    .text-box {
+      font-size: 20px; /* Larger font for chart titles */
+      font-weight: bold; /* Bold font */
+      margin-bottom: 10px; /* Space below titles */
+    }
+
     .vega-embed {
-      display: inline-block;
+      display: inline-block; /* Center the visualization */
       text-align: center;
+      margin: 10px 0; /* Space around visualizations */
     }
   </style>
 </head>
 <body>
 
-  <!-- Title for the overall page -->
-  <h1>Malaysian Household Inequality, Poverty and Income Visualization</h1>
-  
-  <!-- Container for embedding the Vega visualizations -->
-  <div class="visualization-container">
-    <div id="choropleth_map"></div>
-    <div id="line_chart"></div>
+  <div class="content-wrapper">
+    <!-- Title for the overall page -->
+    <h1>Household Income, Expenditure and Poverty in Malaysia</h1>
+    
+    <!-- Description -->
+    <p>
+      Text Box
+    </p>
+    
+    <!-- Box frame for Gini Coefficient Map -->
+    <div class="box-frame">
+      <div class="text-box">Gini Coefficient Map</div>
+      <p>
+        Text Box
+      </p>
+      <div id="choropleth_map"></div>
+    </div>
+
+    <!-- Box frame for Poverty Rate Chart -->
+    <div class="box-frame">
+      <div class="text-box">Poverty Rate by State</div>
+      <p>
+        Text Box
+      </p>
+      <div id="line_chart"></div>
+    </div>
   </div>
 
   <!-- Vega-Lite Visualization -->

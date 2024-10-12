@@ -1,0 +1,304 @@
+state,date,income_median
+Johor,1/1/1970,0
+Johor,1/1/1974,269
+Johor,1/1/1976,370
+Johor,1/1/1979,518
+Johor,1/1/1984,793
+Johor,1/1/1987,816
+Johor,1/1/1989,880
+Johor,1/1/1992,1225
+Johor,1/1/1995,1610
+Johor,1/1/1997,2056
+Johor,1/1/1999,2012
+Johor,1/1/2002,2212
+Johor,1/1/2004,2325
+Johor,1/1/2007,2726
+Johor,1/1/2009,2958
+Johor,1/1/2012,3650
+Johor,1/1/2014,5197
+Johor,1/1/2016,5652
+Johor,1/1/2019,6427
+Johor,1/1/2020,5690
+Johor,1/1/2022,6879
+Kedah,1/1/1970,0
+Kedah,1/1/1974,151
+Kedah,1/1/1976,193
+Kedah,1/1/1979,259
+Kedah,1/1/1984,472
+Kedah,1/1/1987,531
+Kedah,1/1/1989,552
+Kedah,1/1/1992,758
+Kedah,1/1/1995,990
+Kedah,1/1/1997,1171
+Kedah,1/1/1999,1225
+Kedah,1/1/2002,1451
+Kedah,1/1/2004,1607
+Kedah,1/1/2007,1756
+Kedah,1/1/2009,1966
+Kedah,1/1/2012,2633
+Kedah,1/1/2014,3451
+Kedah,1/1/2016,3811
+Kedah,1/1/2019,4325
+Kedah,1/1/2020,3829
+Kedah,1/1/2022,4402
+Kelantan,1/1/1970,0
+Kelantan,1/1/1974,108
+Kelantan,1/1/1976,163
+Kelantan,1/1/1979,256
+Kelantan,1/1/1984,436
+Kelantan,1/1/1987,482
+Kelantan,1/1/1989,528
+Kelantan,1/1/1992,632
+Kelantan,1/1/1995,789
+Kelantan,1/1/1997,872
+Kelantan,1/1/1999,946
+Kelantan,1/1/2002,1154
+Kelantan,1/1/2004,1258
+Kelantan,1/1/2007,1510
+Kelantan,1/1/2009,1713
+Kelantan,1/1/2012,2276
+Kelantan,1/1/2014,2716
+Kelantan,1/1/2016,3079
+Kelantan,1/1/2019,3563
+Kelantan,1/1/2020,3010
+Kelantan,1/1/2022,3614
+Melaka,1/1/1970,0
+Melaka,1/1/1974,255
+Melaka,1/1/1976,350
+Melaka,1/1/1979,528
+Melaka,1/1/1984,738
+Melaka,1/1/1987,780
+Melaka,1/1/1989,828
+Melaka,1/1/1992,1118
+Melaka,1/1/1995,1391
+Melaka,1/1/1997,1793
+Melaka,1/1/1999,1715
+Melaka,1/1/2002,2051
+Melaka,1/1/2004,2308
+Melaka,1/1/2007,2717
+Melaka,1/1/2009,3005
+Melaka,1/1/2012,3923
+Melaka,1/1/2014,5029
+Melaka,1/1/2016,5588
+Melaka,1/1/2019,6054
+Melaka,1/1/2020,5447
+Melaka,1/1/2022,6210
+Negeri Sembilan,1/1/1970,0
+Negeri Sembilan,1/1/1974,273
+Negeri Sembilan,1/1/1976,348
+Negeri Sembilan,1/1/1979,486
+Negeri Sembilan,1/1/1984,753
+Negeri Sembilan,1/1/1987,674
+Negeri Sembilan,1/1/1989,842
+Negeri Sembilan,1/1/1992,987
+Negeri Sembilan,1/1/1995,1358
+Negeri Sembilan,1/1/1997,1731
+Negeri Sembilan,1/1/1999,1777
+Negeri Sembilan,1/1/2002,2080
+Negeri Sembilan,1/1/2004,2288
+Negeri Sembilan,1/1/2007,2556
+Negeri Sembilan,1/1/2009,2711
+Negeri Sembilan,1/1/2012,3575
+Negeri Sembilan,1/1/2014,4128
+Negeri Sembilan,1/1/2016,4579
+Negeri Sembilan,1/1/2019,5005
+Negeri Sembilan,1/1/2020,4478
+Negeri Sembilan,1/1/2022,5226
+Pahang,1/1/1970,0
+Pahang,1/1/1974,210
+Pahang,1/1/1976,324
+Pahang,1/1/1979,481
+Pahang,1/1/1984,731
+Pahang,1/1/1987,697
+Pahang,1/1/1989,764
+Pahang,1/1/1992,957
+Pahang,1/1/1995,1138
+Pahang,1/1/1997,1259
+Pahang,1/1/1999,1202
+Pahang,1/1/2002,1423
+Pahang,1/1/2004,1783
+Pahang,1/1/2007,2235
+Pahang,1/1/2009,2479
+Pahang,1/1/2012,3067
+Pahang,1/1/2014,3389
+Pahang,1/1/2016,3979
+Pahang,1/1/2019,4440
+Pahang,1/1/2020,4033
+Pahang,1/1/2022,4753
+Perak,1/1/1970,0
+Perak,1/1/1974,213
+Perak,1/1/1976,286
+Perak,1/1/1979,394
+Perak,1/1/1984,646
+Perak,1/1/1987,659
+Perak,1/1/1989,719
+Perak,1/1/1992,958
+Perak,1/1/1995,1102
+Perak,1/1/1997,1522
+Perak,1/1/1999,1350
+Perak,1/1/2002,1613
+Perak,1/1/2004,1732
+Perak,1/1/2007,1905
+Perak,1/1/2009,2094
+Perak,1/1/2012,2665
+Perak,1/1/2014,3451
+Perak,1/1/2016,4006
+Perak,1/1/2019,4273
+Perak,1/1/2020,3759
+Perak,1/1/2022,4494
+Perlis,1/1/1970,0
+Perlis,1/1/1974,147
+Perlis,1/1/1976,196
+Perlis,1/1/1979,223
+Perlis,1/1/1984,485
+Perlis,1/1/1987,544
+Perlis,1/1/1989,635
+Perlis,1/1/1992,761
+Perlis,1/1/1995,889
+Perlis,1/1/1997,1114
+Perlis,1/1/1999,1086
+Perlis,1/1/2002,1431
+Perlis,1/1/2004,1459
+Perlis,1/1/2007,1746
+Perlis,1/1/2009,1832
+Perlis,1/1/2012,2387
+Perlis,1/1/2014,3500
+Perlis,1/1/2016,4204
+Perlis,1/1/2019,4594
+Perlis,1/1/2020,4043
+Perlis,1/1/2022,4713
+Pulau Pinang,1/1/1970,0
+Pulau Pinang,1/1/1974,241
+Pulau Pinang,1/1/1976,363
+Pulau Pinang,1/1/1979,534
+Pulau Pinang,1/1/1984,812
+Pulau Pinang,1/1/1987,833
+Pulau Pinang,1/1/1989,988
+Pulau Pinang,1/1/1992,1365
+Pulau Pinang,1/1/1995,1693
+Pulau Pinang,1/1/1997,2338
+Pulau Pinang,1/1/1999,2323
+Pulau Pinang,1/1/2002,2572
+Pulau Pinang,1/1/2004,2650
+Pulau Pinang,1/1/2007,2902
+Pulau Pinang,1/1/2009,3200
+Pulau Pinang,1/1/2012,4039
+Pulau Pinang,1/1/2014,4702
+Pulau Pinang,1/1/2016,5409
+Pulau Pinang,1/1/2019,6169
+Pulau Pinang,1/1/2020,5474
+Pulau Pinang,1/1/2022,6502
+Sabah,1/1/1976,309
+Sabah,1/1/1979,493
+Sabah,1/1/1984,749
+Sabah,1/1/1987,726
+Sabah,1/1/1989,863
+Sabah,1/1/1992,994
+Sabah,1/1/1995,1133
+Sabah,1/1/1997,1390
+Sabah,1/1/1999,1264
+Sabah,1/1/2002,1583
+Sabah,1/1/2004,1606
+Sabah,1/1/2007,1189
+Sabah,1/1/2009,2066
+Sabah,1/1/2012,2860
+Sabah,1/1/2014,3745
+Sabah,1/1/2016,4110
+Sabah,1/1/2019,4235
+Sabah,1/1/2020,3773
+Sabah,1/1/2022,4577
+Sarawak,1/1/1976,260
+Sarawak,1/1/1979,365
+Sarawak,1/1/1984,660
+Sarawak,1/1/1987,754
+Sarawak,1/1/1989,819
+Sarawak,1/1/1992,999
+Sarawak,1/1/1995,1305
+Sarawak,1/1/1997,1499
+Sarawak,1/1/1999,1667
+Sarawak,1/1/2002,1704
+Sarawak,1/1/2004,1804
+Sarawak,1/1/2007,2250
+Sarawak,1/1/2009,2394
+Sarawak,1/1/2012,3047
+Sarawak,1/1/2014,3778
+Sarawak,1/1/2016,4163
+Sarawak,1/1/2019,4544
+Sarawak,1/1/2020,3831
+Sarawak,1/1/2022,4978
+Selangor,1/1/1970,0
+Selangor,1/1/1974,363
+Selangor,1/1/1976,441
+Selangor,1/1/1979,647
+Selangor,1/1/1984,1010
+Selangor,1/1/1987,1049
+Selangor,1/1/1989,1145
+Selangor,1/1/1992,1572
+Selangor,1/1/1995,2255
+Selangor,1/1/1997,2850
+Selangor,1/1/1999,2750
+Selangor,1/1/2002,3144
+Selangor,1/1/2004,3588
+Selangor,1/1/2007,4046
+Selangor,1/1/2009,4306
+Selangor,1/1/2012,5353
+Selangor,1/1/2014,6214
+Selangor,1/1/2016,7225
+Selangor,1/1/2019,8210
+Selangor,1/1/2020,7300
+Selangor,1/1/2022,9983
+Terengganu,1/1/1970,0
+Terengganu,1/1/1974,130
+Terengganu,1/1/1976,199
+Terengganu,1/1/1979,258
+Terengganu,1/1/1984,524
+Terengganu,1/1/1987,472
+Terengganu,1/1/1989,520
+Terengganu,1/1/1992,680
+Terengganu,1/1/1995,756
+Terengganu,1/1/1997,1026
+Terengganu,1/1/1999,1155
+Terengganu,1/1/2002,1331
+Terengganu,1/1/2004,1353
+Terengganu,1/1/2007,1796
+Terengganu,1/1/2009,2096
+Terengganu,1/1/2012,3034
+Terengganu,1/1/2014,3777
+Terengganu,1/1/2016,4694
+Terengganu,1/1/2019,5545
+Terengganu,1/1/2020,4790
+Terengganu,1/1/2022,5878
+W.P. Kuala Lumpur,1/1/1976,645
+W.P. Kuala Lumpur,1/1/1984,1217
+W.P. Kuala Lumpur,1/1/1987,1180
+W.P. Kuala Lumpur,1/1/1989,1294
+W.P. Kuala Lumpur,1/1/1992,1753
+W.P. Kuala Lumpur,1/1/1995,2321
+W.P. Kuala Lumpur,1/1/1997,3090
+W.P. Kuala Lumpur,1/1/1999,2828
+W.P. Kuala Lumpur,1/1/2002,3364
+W.P. Kuala Lumpur,1/1/2004,3336
+W.P. Kuala Lumpur,1/1/2007,3697
+W.P. Kuala Lumpur,1/1/2009,4409
+W.P. Kuala Lumpur,1/1/2012,5847
+W.P. Kuala Lumpur,1/1/2014,7620
+W.P. Kuala Lumpur,1/1/2016,9073
+W.P. Kuala Lumpur,1/1/2019,10549
+W.P. Kuala Lumpur,1/1/2020,9093
+W.P. Kuala Lumpur,1/1/2022,10234
+W.P. Labuan,1/1/2007,2777
+W.P. Labuan,1/1/2009,3498
+W.P. Labuan,1/1/2012,5063
+W.P. Labuan,1/1/2014,5684
+W.P. Labuan,1/1/2016,5928
+W.P. Labuan,1/1/2019,6726
+W.P. Labuan,1/1/2020,6126
+W.P. Labuan,1/1/2022,6904
+W.P. Putrajaya,1/1/2007,4288
+W.P. Putrajaya,1/1/2009,5450
+W.P. Putrajaya,1/1/2012,6486
+W.P. Putrajaya,1/1/2014,7512
+W.P. Putrajaya,1/1/2016,8275
+W.P. Putrajaya,1/1/2019,9983
+W.P. Putrajaya,1/1/2020,9743
+W.P. Putrajaya,1/1/2022,10056

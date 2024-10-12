@@ -95,6 +95,15 @@
       </p>
       <div id="line_chart"></div>
     </div>
+
+    <!-- Box frame for Bar Chart -->
+    <div class="box-frame">
+      <div class="text-box">Mean and Median Rate of Income by State</div>
+      <p>
+        Text Box
+      </p>
+      <div id="bar_chart"></div>
+    </div>
   </div>
 
   <!-- Vega-Lite Visualization -->
@@ -105,9 +114,15 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    // Embed Poverty Line Chart
+    // Embed Poverty Rate Chart (Line Chart)
     var lineChartSpec = "js/line_chart.vg.json";
     vegaEmbed('#line_chart', lineChartSpec).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    // Embed Bar Chart
+    var barChartSpec = "js/bar_charts.vg.json"; // Correct reference to your bar chart specification
+    vegaEmbed('#bar_chart', barChartSpec).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

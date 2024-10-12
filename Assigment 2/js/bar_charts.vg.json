@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "hconcat": [
+    {
+      "width": 400,
+      "height": 200,
+      "padding": { "top": 10, "left": 10, "right": 10, "bottom": 10 },
+      "background": "lightyellow",
+      "title": {
+        "text": "Bar Chart of Mean Values by State (1972 to 2022)",
+        "anchor": "middle"
+      },
+      "data": {
+        "url": "data/hh_income_state_mean.csv",
+        "format": { "type": "csv" }
+      },
+      "transform": [
+        {
+          "filter": "selected_state === 'All' || datum.state === selected_state"
+        }
+      ],
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "ordinal",
+          "title": "Year"
+        },
+        "y": {
+          "field": "income_mean", 
+          "type": "quantitative",
+          "title": "Mean Value"
+        },
+        "color": {
+          "field": "state",  
+          "type": "nominal",
+          "title": "State"
+        },
+        "tooltip": [
+          { "field": "state", "type": "nominal", "title": "State" },
+          { "field": "date", "type": "ordinal", "title": "Year" },
+          { "field": "income_mean", "type": "quantitative", "title": "Mean Value" }
+        ]
+      }
+    },
+    {
+      "width": 400,
+      "height": 200,
+      "padding": { "top": 10, "left": 10, "right": 10, "bottom": 10 },
+      "background": "lightyellow",
+      "title": {
+        "text": "Bar Chart of Median Values by State (1972 to 2022)",
+        "anchor": "middle"
+      },
+      "data": {
+        "url": "data/hh_income_state_median.csv",  
+        "format": { "type": "csv" }
+      },
+      "transform": [
+        {
+          "filter": "selected_state === 'All' || datum.state === selected_state"
+        }
+      ],
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "ordinal",
+          "title": "Year"
+        },
+        "y": {
+          "field": "income_median",  
+          "type": "quantitative",
+          "title": "Median Income Value"
+        },
+        "color": {
+          "field": "state",  
+          "type": "nominal",
+          "title": "State"
+        },
+        "tooltip": [
+          { "field": "state", "type": "nominal", "title": "State" },
+          { "field": "date", "type": "ordinal", "title": "Year" },
+          { "field": "income_median", "type": "quantitative", "title": "Median Income Value" }
+        ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "selected_state",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All", 
+          "Johor", 
+          "Kedah", 
+          "Kelantan", 
+          "Melaka", 
+          "Negeri Sembilan", 
+          "Pahang", 
+          "Pulau Pinang", 
+          "Perak", 
+          "Perlis", 
+          "Sabah", 
+          "Sarawak", 
+          "Selangor", 
+          "Terengganu", 
+          "W.P. Kuala Lumpur", 
+          "W.P. Labuan", 
+          "W.P. Putrajaya"
+        ],
+        "name": "Select State: "
+      }
+    }
+  ]
+}

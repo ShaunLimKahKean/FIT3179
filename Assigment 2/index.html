@@ -1,20 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysian Household Data Visualization</title>
+  
+  <!-- Vega and Vega-Lite scripts -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+  <!-- Styling to center and format the page -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    #choropleth_map, #line_chart {
+      width: 80%; /* You can adjust the width if necessary */
+      margin: 20px auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .visualization-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Center the visualization */
+    .vega-embed {
+      display: inline-block;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  
-<div id="choropleth_map"></div>
 
-<script type="text/javascript">
-  var spec2 = "js/choropleth_map.vg.json";
-  vegaEmbed('#choropleth_map', spec2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+  <!-- Title for the overall page -->
+  <h1>Malaysian Household Inequality, Poverty and Income Visualization</h1>
+  
+  <!-- Container for embedding the Vega visualizations -->
+  <div class="visualization-container">
+    <div id="choropleth_map"></div>
+    <div id="line_chart"></div>
+  </div>
+
+  <!-- Vega-Lite Visualization -->
+  <script type="text/javascript">
+    // Embed Gini Map (choropleth map)
+    var choroplethSpec = "js/choropleth_map.vg.json";
+    vegaEmbed('#choropleth_map', choroplethSpec).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    // Embed Poverty Line Chart
+    var lineChartSpec = "js/line_chart.vg.json";
+    vegaEmbed('#line_chart', lineChartSpec).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
 
 </body>
 </html>

@@ -4,108 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malaysian Household Data Visualization</title>
-  
   <!-- Vega and Vega-Lite scripts -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
-  
   <!-- Styling to center and format the page -->
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: white; /* Light background for the whole page */
-      color: #333; /* Dark text color for contrast */
+      background-color: white;
+      color: #333;
       padding: 20px;
-      text-align: center; /* Center-align the text */
+      text-align: center;
     }
-
-    /* Main content wrapper */
     .content-wrapper {
-      background-color: lightpink; /* Background color for the content */
-      max-width: 1200px; /* Max width for the content */
-      margin: 0 auto; /* Center the content horizontally */
-      padding: 20px; /* Padding around the content */
-      border-radius: 10px; /* Rounded corners for the content */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      background-color: lightpink;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
     h1 {
-      font-size: 28px; /* Larger font size for title */
-      margin-bottom: 10px; /* Space below the title */
+      font-size: 36px;
+      margin-bottom: 10px;
     }
-
     p {
-      font-size: 16px; /* Standard font size for description */
-      margin-bottom: 20px; /* Space below the description */
-      max-width: 800px; /* Limiting width of paragraph */
+      font-size: 16px;
+      margin-bottom: 20px;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
     }
-
-    /* Box frame styles */
     .box-frame {
-      background-color: lightyellow; /* White background for the box */
-      border-radius: 10px; /* Rounded corners */
-      padding: 20px; /* Padding inside the box */
-      margin: 20px auto; /* Center and space out the box */
-      width: 90%; /* Width of the box */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      background-color: lightyellow;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
-    /* Text box styles */
     .text-box {
-      font-size: 20px; /* Larger font for chart titles */
-      font-weight: bold; /* Bold font */
-      margin-bottom: 10px; /* Space below titles */
-    }
-
-    .vega-embed {
-      display: inline-block; /* Center the visualization */
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
       text-align: center;
-      margin: 10px 0; /* Space around visualizations */
+      text-decoration: underline;
+    }
+    .vega-embed {
+      display: inline-block;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 40px;
+      align-items: center;
+      text-align: center;
+    }
+    .left-align {
+      text-align: left; /* Left-align text */
+      display: inline-block; /* Keep inline with text */
+      max-width: 800px; /* Limit width */
+      margin: 0 auto; /* Center container */
     }
   </style>
 </head>
 <body>
-
   <div class="content-wrapper">
+    <div class="box-frame">
     <!-- Title for the overall page -->
-    <h1>Household Income, Expenditure and Poverty in Malaysia</h1>
-    
+    <h1>Household Income, Inequality and Poverty in Malaysia</h1>
     <!-- Description -->
-    <p>
-      Text Box
-    </p>
-    
+    <p>This visualization presents data on household income, inequality (Gini coefficient), and poverty rates across different states in Malaysia from the year 1970 to 2022. The visual is designed to help users understand the disparities in wealth distribution and identify states with higher levels of poverty and inequality. Using interactive elements, users can explore changes over time, comparing data across multiple years, and observe trends at the state level.</p>
+    </div>
     <!-- Box frame for Gini Coefficient Map -->
     <div class="box-frame">
       <div class="text-box">Gini Coefficient Map</div>
-      <p>
-        Text Box
-      </p>
+      <p>The Gini Coefficient Map illustrates income inequality across Malaysian states from 1974 to 2022. The Gini coefficient ranges from 0 (perfect equality) to 1 (complete inequality), with darker shades indicating higher inequality.</p>
+      <p>For 2022, states like Sabah, Sarawak, and Kelantan show higher inequality, with Sabah having a Gini coefficient of 0.395, reflecting significant income disparity. In contrast, states like Pahang have lower Gini coefficients, indicating more equitable income distribution. The map allows users to toggle between years to explore trends over time.</p>
       <div id="choropleth_map"></div>
     </div>
-
     <!-- Box frame for Poverty Rate Chart -->
     <div class="box-frame">
       <div class="text-box">Poverty Rate by State</div>
-      <p>
-        Text Box
-      </p>
+      <p>The Poverty Rate by State chart shows the absolute poverty rates in Malaysian states from 1970 to 2022. It highlights a significant decline in poverty rates overall, though states like Sabah and Sarawak still face higher poverty levels.</p>
+      <p>Recent years (2019-2022) show small spikes due to economic shocks like COVID-19. Developed regions like W.P. Kuala Lumpur and Selangor maintain low rates. The chart helps identify long-term progress and areas needing more focus.</p>
       <div id="line_chart"></div>
     </div>
-
-    <!-- Box frame for Bar Chart -->
+    <!-- Box frame for Bar Chart with side-by-side text boxes -->
     <div class="box-frame">
-      <div class="text-box">Mean and Median Rate of Income by State</div>
-      <p>
-        Text Box
-      </p>
+      <div class="flex-container">
+        <div>
+          <div class="text-box">Mean Rate of Income by State</div>
+          <p>This chart shows the mean income rate for various states from 1970 to 2022. Different colored segments represent income values for different states. The chart reveals a steady increase in mean income values over the decades, with noticeable spikes around 2007 and 2019.</p>
+        </div>
+        <div>
+          <div class="text-box">Median Rate of Income by State</div>
+          <p>This chart represents the median income rate for the same states over the same period. Like the mean chart, the median income has been increasing steadily, though median values tend to be lower than the mean, indicating potential income skewness due to higher earners.</p>
+        </div>
+      </div>
       <div id="bar_chart"></div>
+      <p>Income growth is evident in both charts from 1970 to 2022, with an acceleration post-2000 likely due to economic reforms. Mean incomes are higher than median incomes, indicating potential income inequality.</p>
+      <p>Wealthier states like W.P. Kuala Lumpur, Selangor, and Johor show significantly higher income rates, reflecting uneven economic development. Sharp income growth post-2010 is driven by urbanization and technological advancements. The larger gap between mean and median incomes in recent years suggests growing inequality. Overall, the charts illustrate positive economic growth and underlying income distribution disparities.</p>
     </div>
-  </div>
-
+    <!-- Additional text box at the bottom -->
+    <div class="box-frame">
+      <div class="text-box">Additional Information</div>
+      <p>This visualization was created by <a href="https://github.com/ShaunLimKahKean/FIT3179/tree/main/Assigment%202">Shaun Lim Kah Kean</a> 32203896 (15/10/2024)</p>
+        <p>Data Sources List:</p>
+        <ul class="left-align">
+          <li><a href="https://data.gov.my/data-catalogue/hh_inequality_state">Gini Coefficient Data</a></li>
+          <li><a href="https://data.gov.my/data-catalogue/hh_poverty_state">Poverty Rate Data</a></li>
+          <li><a href="https://data.gov.my/data-catalogue/hh_income_state">Mean and Median Income Rate Data</a></li>
+        </ul>
+      </div>
+    </div>
   <!-- Vega-Lite Visualization -->
   <script type="text/javascript">
     // Embed Gini Map (choropleth map)
@@ -121,11 +136,10 @@
     }).catch(console.error);
 
     // Embed Bar Chart
-    var barChartSpec = "js/bar_charts.vg.json"; // Correct reference to your bar chart specification
+    var barChartSpec = "js/bar_charts.vg.json";
     vegaEmbed('#bar_chart', barChartSpec).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
-
 </body>
 </html>

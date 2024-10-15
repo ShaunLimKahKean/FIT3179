@@ -25,7 +25,10 @@
         "x": {
           "field": "date",
           "type": "ordinal",
-          "title": "Year"
+          "title": "Year",
+          "axis": {
+            "labelAngle": -45
+          }
         },
         "y": {
           "field": "income_mean",
@@ -73,7 +76,10 @@
         "x": {
           "field": "date",
           "type": "ordinal",
-          "title": "Year"
+          "title": "Year",
+          "axis": {
+            "labelAngle": -45
+          }
         },
         "y": {
           "field": "income_median",

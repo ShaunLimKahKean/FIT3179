@@ -1,13 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "padding": { "top": 10, "left": 10, "right": 10, "bottom": 10 },
+  "background": "lightyellow",
   "hconcat": [
     {
       "width": 400,
       "height": 200,
-      "padding": { "top": 10, "left": 10, "right": 10, "bottom": 10 },
-      "background": "lightyellow",
+      
       "title": {
-        "text": "Bar Chart of Mean Values by State (1972 to 2022)",
+        "text": "Mean Values by State (1970 to 2022)",
         "anchor": "middle"
       },
       "data": {
@@ -27,33 +28,39 @@
           "title": "Year"
         },
         "y": {
-          "field": "income_mean", 
+          "field": "income_mean",
           "type": "quantitative",
-          "title": "Mean Value"
+          "title": "Mean Income Value"
         },
         "color": {
-          "field": "state",  
+          "field": "state",
           "type": "nominal",
-          "title": "State"
+          "title": "State",
+          "scale": {
+            "range": [
+              "#E69F00", "#56B4E9", "#76f59a", "#F0E442", "#0072B2", "#D55E00", 
+              "#CC79A7", "#999999", "#FDE725", "#35B779", "#31688E", "#440154", 
+              "#CFE11F", "#FF7F00", "#8DA0CB", "#E7298A"
+            ]
+          }
         },
         "tooltip": [
           { "field": "state", "type": "nominal", "title": "State" },
-          { "field": "date", "type": "ordinal", "title": "Year" },
-          { "field": "income_mean", "type": "quantitative", "title": "Mean Value" }
+          { "field": "income_mean", "type": "quantitative", "title": "Mean Value" },
+          { "field": "date", "type": "ordinal", "title": "Year" }
+          
         ]
       }
     },
     {
       "width": 400,
       "height": 200,
-      "padding": { "top": 10, "left": 10, "right": 10, "bottom": 10 },
-      "background": "lightyellow",
       "title": {
-        "text": "Bar Chart of Median Values by State (1972 to 2022)",
+        "text": "Median Values by State (1970 to 2022)",
         "anchor": "middle"
       },
       "data": {
-        "url": "data/hh_income_state_median.csv",  
+        "url": "data/hh_income_state_median.csv",
         "format": { "type": "csv" }
       },
       "transform": [
@@ -69,19 +76,27 @@
           "title": "Year"
         },
         "y": {
-          "field": "income_median",  
+          "field": "income_median",
           "type": "quantitative",
           "title": "Median Income Value"
         },
         "color": {
-          "field": "state",  
+          "field": "state",
           "type": "nominal",
-          "title": "State"
+          "title": "State",
+          "scale": {
+            "range": [
+              "#E69F00", "#56B4E9", "#76f59a", "#F0E442", "#0072B2", "#D55E00", 
+              "#CC79A7", "#999999", "#FDE725", "#35B779", "#31688E", "#440154", 
+              "#CFE11F", "#FF7F00", "#8DA0CB", "#E7298A"
+            ]
+          }
         },
         "tooltip": [
           { "field": "state", "type": "nominal", "title": "State" },
-          { "field": "date", "type": "ordinal", "title": "Year" },
-          { "field": "income_median", "type": "quantitative", "title": "Median Income Value" }
+          { "field": "income_median", "type": "quantitative", "title": "Median Income Value" },
+          { "field": "date", "type": "ordinal", "title": "Year" }
+          
         ]
       }
     }
@@ -93,22 +108,9 @@
       "bind": {
         "input": "select",
         "options": [
-          "All", 
-          "Johor", 
-          "Kedah", 
-          "Kelantan", 
-          "Melaka", 
-          "Negeri Sembilan", 
-          "Pahang", 
-          "Pulau Pinang", 
-          "Perak", 
-          "Perlis", 
-          "Sabah", 
-          "Sarawak", 
-          "Selangor", 
-          "Terengganu", 
-          "W.P. Kuala Lumpur", 
-          "W.P. Labuan", 
+          "All", "Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", 
+          "Pahang", "Pulau Pinang", "Perak", "Perlis", "Sabah", "Sarawak", 
+          "Selangor", "Terengganu", "W.P. Kuala Lumpur", "W.P. Labuan", 
           "W.P. Putrajaya"
         ],
         "name": "Select State: "

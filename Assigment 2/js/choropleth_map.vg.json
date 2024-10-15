@@ -35,12 +35,13 @@
     "color": {
       "field": "gini",
       "type": "quantitative",
-      "scale": { "scheme": "greens" }
+      "scale": { "scheme": "blueorange" },
+      "title": "Gini Coefficient"
     },
     "tooltip": [
       { "field": "properties.name", "type": "nominal", "title": "State Name" },
-      { "field": "gini", "type": "quantitative" },
-      { "field": "date", "type": "ordinal", "title": "Year of Data" }
+      { "field": "gini", "type": "quantitative", "title": "Gini Coefficient" },
+      { "field": "date", "type": "ordinal", "title": "Year" }
     ]
   },
   "transform": [
